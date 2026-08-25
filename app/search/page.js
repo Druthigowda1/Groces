@@ -30,7 +30,7 @@ function SearchResults() {
   return (
     <div>
       <h2 className="text-2xl font-bold text-gray-900 mb-8">
-        Search Results for "{query}"
+        Search Results for &quot;{query}&quot;
       </h2>
       
       {searchResults.length === 0 ? (
