@@ -5,6 +5,12 @@ import { Calendar, User, ChevronLeft } from 'lucide-react';
 import { mockBlogs } from '../../../lib/data/mockBlogs';
 import ReactMarkdown from 'react-markdown';
 
+export function generateStaticParams() {
+  return mockBlogs.map((blog) => ({
+    id: blog.id,
+  }));
+}
+
 export function generateMetadata({ params }) {
   const blog = mockBlogs.find(b => b.id === params.id);
   if (!blog) return { title: 'Not Found | Grocery Hub' };
